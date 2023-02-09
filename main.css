@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  color: #eee;
+  padding: 0px;
+}
+/* ///////////////--- this class like bootstrap class  --- ////////////////////// */
+.d-block {
+  display: block;
+}
+.d-none {
+  display: none;
+}
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
+.grid-gap {
+  grid-gap: 10px;
+}
+.over-flow {
+  overflow: hidden;
+}
+.font-ccc {
+  color: #eee;
+}
+.font-matt {
+  color: #222;
+}
+.border-radius-5px {
+  border-radius: 5px;
+}
+.border-radius-1rem {
+  border-radius: 1rem;
+}
+.ma {
+  margin: auto;
+}
+.mt {
+  margin-top: 10px;
+}
+.ml {
+  margin-left: 10px;
+}
+.mr {
+  margin-right: 10px;
+}
+.mb {
+  margin-bottom: 10px;
+}
+.m {
+  margin: 10px;
+}
+/* /////////////////////////////////////// */
+.w-100 {
+  width: 100%;
+}
+/* /////////////////////////////////////// */
+.p {
+  padding: 10px;
+}
+.pl {
+  padding-left: 10px;
+}
+.pt {
+  padding-top: 10px;
+}
+.pb {
+  padding-bottom: 10px;
+}
+/* /////////////----------------------/////////////////// */
+
+/* /////////////----------------------/////////////////// */
+body {
+  background: url("https://wallpaperaccess.com/full/1519181.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+nav {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 50%;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+nav .fa-bars {
+  display: none;
+}
+.sections {
+  grid-template-rows: 70vh auto auto;
+}
+.sections header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+.sections header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: fill;
+  box-shadow: 2px 3px 4px -1px black;
+}
+/* //////////////---- about information ----////////////////////// */
+.sections .about-info {
+  grid-template-columns: 1fr 1fr;
+}
+.sections .about {
+  grid-column: 1/2;
+}
+.sections .info {
+  grid-column: 2/3;
+}
+.sections .about,
+.sections .info {
+  background-color: #eeeeee98;
+}
+.sections .about:hover,
+.sections .info:hover {
+  background-color: #eeeeeeb0;
+  transform: scale(1.04);
+  transition: all 0.3s;
+}
+.about-info article h1 {
+  color: #0f2b4d;
+  font-size: 25px;
+  margin-bottom: 7px;
+}
+.sections .about,
+.sections .info,
+.sections .card p {
+  text-align: justify;
+}
+/* //////////////---- cards ----////////////////////// */
+.sections .sec-card {
+  grid-template-columns: repeat(4, 1fr);
+}
+.sections .card {
+  margin: 20px;
+  background-color: #eee;
+}
+.sections .card .img-div {
+  width: 100%;
+  height: 250px;
+}
+.sections .card .title {
+  text-transform: capitalize;
+}
+.sections .card h4 {
+  text-align: center;
+}
+
+.sections .card .img-div img {
+  width: 100%;
+  height: 100%;
+}
+
+.sections .card .img-div img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+/* //////////////---- footer ----////////////////////// */
+.footer {
+  background-color: #111;
+  text-align: center;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.footer span {
+  grid-column: 2/3;
+  text-transform: capitalize;
+  padding: 0px 5px 0px 5px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eee;
+  margin: 10px 10px;
+  color: #eee;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding: 8px 10px;
+}
+.footer span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1%;
+  height: 3px;
+  background-color: #eee;
+
+  transition: width 0.5s;
+}
+nav i:hover,
+.footer span:hover {
+  color: orange;
+  border-color: orange;
+}
+ul li i:hover::before,
+.footer span:hover::before {
+  width: 100%;
+}
+/* tablet screen size */
+@media screen and (max-width: 800px) {
+  nav {
+    width: 80%;
+  }
+  /* /////////////////////////////////////// */
+  .sections header {
+    font-size: 2.5rem;
+  }
+  .sections header img {
+    width: 150px;
+    height: 150px;
+  }
+  /* //////////////---- card ----////////////////////// */
+  .sections .sec-card {
+    grid-template-rows: auto auto;
+  }
+  .sections .sec-card .one {
+    grid-column: 1/3;
+  }
+  .sections .sec-card .tow {
+    grid-column: 3/5;
+  }
+}
+/* mobile screen size */
+@media screen and (max-width: 450px) {
+  nav {
+    margin-top: 0px;
+    width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+  /* /////////////////////////////////////// */
+  .sections header {
+    font-size: 2rem;
+  }
+  .sections header img {
+    width: 130px;
+    height: 130px;
+  }
+  /* ////////////////////////////////////////// */
+  .sections {
+    grid-template-rows: 50vh auto auto;
+    grid-gap: 5px;
+  }
+
+  nav .s-d-block {
+    display: block;
+  }
+  .s-d-none {
+    display: none;
+  } /* //////////////---- about information ----////////////////////// */
+  .sections .about-info {
+    grid-template-rows: repeat(2, auto);
+  }
+  .sections .about {
+    grid-column: 1/3;
+  }
+  .sections .info {
+    grid-column: 1/3;
+  }
+  /* //////////////---- card ----////////////////////// */
+  .sections .sec-card {
+    grid-template-rows: repeat(4, auto);
+  }
+  .sections .sec-card .card {
+    grid-column: 1/5;
+  }
+}
